@@ -223,7 +223,6 @@ const recipes = [
   }
 ]
 
-
 // Get references to HTML elements using their IDs. 
 const filterDropDown = document.getElementById("filterDropDown")
 const sortingDropDown = document.getElementById("sortingDropDown")
@@ -238,9 +237,12 @@ const loadRecipes = (recipeArray) => {
 
     container.innerHTML += `
     <div class="card">
-    <p>${recipe.name}</p>
+    <h2>${recipe.name}</h2>
     <img src=${recipe.image} art=${recipe.name}>
+    <p><b>Ingredients: </b>${recipe.ingredients}</p>
     <p><b>Total time:</b> ${recipe.totalTime} min</p>
+    <p><b>Cuisine type:</b> ${recipe.cuisineType}</p>
+    <p><b>Source:</b> <a href="${recipe.url}">${recipe.source}</a></p>
       </div>
 `;
 })
@@ -262,7 +264,6 @@ const filterRecipes = () => {
     loadRecipes(filteredList);
   }
 };
-
 
 
 //Function to sort recipes.
@@ -295,17 +296,14 @@ const sortRecipes = () => {
   }
 
 
-
 };
 
 
 // Apply the sorting when the user changes the sorting selection.
 sortingDropDown.addEventListener("change", sortRecipes);
 
-
 // Apply the filter when the user changes the dropdown selection.
 filterDropDown.addEventListener("change", filterRecipes);
-
 
 // Load the list of recipes when the page loads.
 loadRecipes(recipes);

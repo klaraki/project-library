@@ -1,48 +1,49 @@
-html, body {
+body {
     background-color: pink;
-    
 }
+
 
 h1 {
-    font-size; 16px;
+    font-size: 16px;
     font-family: arial, sans-serif;
     text-align: center; 
 }
 
+h2 {
+  font-size: 13px;
+  font-family: arial, sans-serif;
+  text-align: center; 
+}
 
 p {
-    font-size; 12px;
+    font-size: 12px;
     font-family: arial, sans-serif;
     text-align: center; 
 }
 
+.selections {
+  left: 50%;
+  right: auto;
+  text-align: center;
+  margin-bottom: 25px;
+}
 
 
-#filterDropdown {
-    margin-bottom: 16px;
-    text-align: center;
-    position: absolute;
-    padding: 4px; 
+#container {
+    margin: auto;
   }
   
-  #container {
-    width: 50px;
-    height: 50px;
-  }
-  
-
 
   .card {
-    min-height: 200px;
-    min-width: 200px;
+    max-width: 500px;
+    max-height: auto;
     background: white;
     border-radius: 12px;
     border: 2px solid black;
-    margin: 10px;
+    margin: auto;
+    margin-bottom: 10px;
   }
   
-
-
 
   .card img {
     width: 100%;
